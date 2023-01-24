@@ -21,7 +21,7 @@ body {font-family: 'Noto Sans KR', sans-serif; background-color: #FAB83B; height
 .class-1, .class-2, .class-3 {display: none;}
 
 .btn-wrap {width: 100vw; position: absorgb(245, 141, 57)}
-.next {border-radius: 10%; padding: 0.5rem 1rem; background-color: #9FEADB; position: absolute; left: 50%; transform: translateX(-50%); cursor: pointer; display: inline-block !important; border: none;}
+.next {padding: 3rem 0; text-align: center;  background-color: #9FEADB;  cursor: pointer; display: block; border: none;}
 
 .map-name {text-align: center; margin-bottom: 1rem; font-weight: bold;}
 
