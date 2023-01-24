@@ -13,7 +13,7 @@ body {font-family: 'Noto Sans KR', sans-serif; background-color: #FAB83B; height
 .l-title {text-align: center; margin: 1rem 0;}
 .choice-box-wrap {display: flex; justify-content: space-between; width: 95%; align-items: center; margin: 0 auto;}
 .click-me {border: 1px solid #111; display: inline-block; padding: 8px 12px; margin-top: 50px; cursor: pointer;}
-.map-choice {margin-bottom: 1.5rem; border-top: 5px solid #fff; border-bottom: 5px solid #fff; padding: 1rem;}
+.map-choice {margin-bottom: 1.5rem; border-top: 5px solid #fff; border-bottom: 5px solid #fff; padding: 1rem 0;}
 .record {display: none;}
 
 .ban {position: relative; top: 0; left: 0; transition: all 0.5s;/*  height: 50vh; */}
