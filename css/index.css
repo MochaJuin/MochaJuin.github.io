@@ -1,0 +1,35 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+html {overflow: hidden;}
+body {font-family: 'Noto Sans KR', sans-serif; background-color: #FAB83B; height: 100vh;}
+.img {width: 100%;}
+
+.logo {width: 70%; margin: 0 auto;}
+.start {z-index: 997; position: fixed; top: 0; left: 0; height: 100%; width: 100vw; background-color: #BCABE2; overflow: hidden; text-align: center; border: 20px solid #fff; padding: 2rem;}
+
+.start-btn {border: 3px solid #111; display: inline-block; padding: 0.5rem 1rem; margin-top: 1rem; cursor: pointer;}
+.version-btn {border: 3px solid #111; display: inline-block; padding: 0.5rem 1rem; position: fixed; right: 3rem; bottom: 3rem; cursor: pointer;}
+
+.choice-wrap .choice-box {padding: 8px 16px; background-color: #9FEADB; border-radius: 10%; transition: all 0.5s; cursor: pointer; flex: 10% 0 0; text-align: center;}
+.l-title {text-align: center; margin: 1rem 0;}
+.choice-box-wrap {display: flex; justify-content: space-around;}
+.click-me {border: 1px solid #111; display: inline-block; padding: 8px 12px; margin-top: 50px; cursor: pointer;}
+.map-choice {margin-bottom: 1.5rem; border-top: 5px solid #fff; border-bottom: 5px solid #fff; padding: 1rem;}
+.record {display: none;}
+
+.ban {position: relative; top: 0; left: 0; transition: all 0.5s;/*  height: 50vh; */}
+
+.class-1, .class-2, .class-3 {display: none;}
+
+.btn-wrap {width: 100vw; position: absorgb(245, 141, 57)}
+.next {border-radius: 10%; padding: 0.5rem 1rem; background-color: #9FEADB; position: absolute; left: 50%; transform: translateX(-50%); cursor: pointer; display: inline-block !important; border: none;}
+
+.map-name {text-align: center; margin-bottom: 1rem; font-weight: bold;}
+
+
+.result-wrap {display: none; width: 100%; height: 100%; background-color: #BCABE2; position: absolute; top: 0; left: 0;}
+
+
+/* versionModal */
+.version-modal-wrap {width: 100vw; height: 100%; background-color: rgba(0,0,0,0.7); position: fixed; top: 0; left: 0; z-index: 999; overflow: hidden; display: none;}
+.version-modal {width: 50%; background-color: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 3rem 2rem; border-radius: 2%;}
+.modal-close {position: absolute; right: 1rem; top: 1rem; cursor: pointer; font-size: 1rem; color: red;}
