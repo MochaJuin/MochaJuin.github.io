@@ -4,12 +4,12 @@ body {font-family: 'Noto Sans KR', sans-serif; background-color: #FAB83B; height
 .img {width: 100%;}
 
 .logo {width: 70%; margin: 0 auto;}
-.start {z-index: 997; position: fixed; top: 0; left: 0; height: 100%; width: 100vw; background-color: #BCABE2; overflow: hidden; text-align: center; border: 20px solid #fff; padding: 2rem;}
+.start {z-index: 997; position: fixed; top: 0; left: 0; height: 100%; width: 100vw; background-color: #BCABE2; overflow: hidden; text-align: center; border: 20px solid #fff; padding: 2rem; font-size: 0.75rem;}
 
 .start-btn {border: 3px solid #111; display: inline-block; padding: 0.5rem 1rem; margin-top: 1rem; cursor: pointer;}
 .version-btn {border: 3px solid #111; display: inline-block; padding: 0.5rem 1rem; position: fixed; right: 3rem; bottom: 3rem; cursor: pointer;}
 
-.choice-wrap .choice-box {padding: 8px 16px; background-color: #9FEADB; border-radius: 10%; transition: all 0.5s; cursor: pointer; flex: 10% 0 0; text-align: center;}
+.choice-wrap .choice-box {padding: 8px; background-color: #9FEADB; border-radius: 10%; transition: all 0.5s; cursor: pointer; flex: 10% 0 0; text-align: center;}
 .l-title {text-align: center; margin: 1rem 0;}
 .choice-box-wrap {display: flex; justify-content: space-around;}
 .click-me {border: 1px solid #111; display: inline-block; padding: 8px 12px; margin-top: 50px; cursor: pointer;}
