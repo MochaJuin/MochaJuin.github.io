@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     for(i=0; i<=choiceMapL0-1; i++) {
         var choiceMapL0Html = '';
-            choiceMapL0Html += '<div class="map-choice l-'+ i +'" value="x">';
+            choiceMapL0Html += '<div class="map-choice m-'+ i +'" value="x">';
             choiceMapL0Html += '<div class="choice-wrap">';
             choiceMapL0Html += '<div class="map-name">'+ mapName[0][i+1][0] +'</div>';
             choiceMapL0Html += '<div class="choice-box-wrap">';
@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     for(i=0; i<=choiceMapL1-1; i++) {
         var choiceMapL1Html = '';
-            choiceMapL1Html += '<div class="map-choice l-'+ i +'" value="x">';
+            choiceMapL1Html += '<div class="map-choice m-'+ i +'" value="x">';
             choiceMapL1Html += '<div class="choice-wrap">';
             choiceMapL1Html += '<div class="map-name">'+ mapName[1][i+1][0] +'</div>';
             choiceMapL1Html += '<div class="choice-box-wrap">';
@@ -56,7 +56,7 @@ $(document).ready(function() {
 
     for(i=0; i<=choiceMapL2-1; i++) {
         var choiceMapL2Html = '';
-            choiceMapL2Html += '<div class="map-choice l-'+ i +'" value="x">';
+            choiceMapL2Html += '<div class="map-choice m-'+ i +'" value="x">';
             choiceMapL2Html += '<div class="choice-wrap">';
             choiceMapL2Html += '<div class="map-name">'+ mapName[2][i+1][0] +'</div>';
             choiceMapL2Html += '<div class="choice-box-wrap">';
@@ -74,7 +74,7 @@ $(document).ready(function() {
 
     for(i=0; i<=choiceMapL3-1; i++) {
         var choiceMapL3Html = '';
-            choiceMapL3Html += '<div class="map-choice l-'+ i +'" value="x">';
+            choiceMapL3Html += '<div class="map-choice m-'+ i +'" value="x">';
             choiceMapL3Html += '<div class="choice-wrap">';
             choiceMapL3Html += '<div class="map-name">'+ mapName[3][i+1][0] +'</div>';
             choiceMapL3Html += '<div class="choice-box-wrap">';
@@ -95,16 +95,20 @@ $(document).ready(function() {
         $(".class-name").append(nextHtml);
 
     $(".choice-box").on("click", function() {
-        $(this).parent().find(".choice-box").css({"background-color" : "#9FEADB", "color": "#111"});
+        $(this).parent().find(".choice-box").css({"background-color" : "#BCABE2", "color": "#111"});
         $(this).css({"background-color" : "#F2B4B5", "color": "#111"});
         var choiceValue = $(this).attr("value");
+        var valueTotal = $(this).parents(".class-name").find(".map-choice").attr("value");
+        var valueTotalNum = add(valueTotal); 
+        $(this).parents(".class-name").attr("value", valueTotalNum);
         $(this).parent().parent().parent().attr("value", choiceValue);
-        $(this).parent().parent().parent().attr("value", choiceValue);
-        var value1 = $(this).parent().parent().parent().parent().find(".l-0").attr("value");
-        var value2 = $(this).parent().parent().parent().parent().find(".l-1").attr("value");
-        var value3 = $(this).parent().parent().parent().parent().find(".l-2").attr("value");
-        var value4 = $(this).parent().parent().parent().parent().find(".l-3").attr("value");
+
+        if ($(this).parents(".class-0")) {
+            $(this).parents(".class-0").attr("value", choiceValue)
+
+        }
         var resultVal = Number(value1) + Number(value2) + Number(value3) + Number(value4);
+        
         var resultComp = resultVal / choiceMapL0;
         $(this).parent().parent().parent().parent().attr("value", Math.round(resultComp));
     });
@@ -141,6 +145,10 @@ $(document).ready(function() {
         var classValue2 = $(this).parent().attr("value");
         var classValue3 = $(this).parent().attr("value");
         var classValue4 = $(this).parent().attr("value");
+        var classRookie = Number(classValue1);
+        var classL3 = Number(classValue2);
+        var classL2 = Number(classValue3);
+        var classL1 = Number(classValue4);
         var classTotal = Number(classValue1) + Number(classValue2) + Number(classValue3) + Number(classValue4);
         var classComp = classTotal / 4;
         // 이벤트는 주석 풀기
@@ -149,7 +157,11 @@ $(document).ready(function() {
         //    return false;
         //} else {
             if(pageNum == pageMax - 1) {
-                $(".result-box").text(classComp);
+                $(".rookie").text(classRookie);
+                $(".l3").text(classL3);
+                $(".l2").text(classL2);
+                $(".l1").text(classL1);
+                $(".total").text(classComp);
                 $(".result-wrap").fadeIn();
                 $(this).hide();
                 return false;
