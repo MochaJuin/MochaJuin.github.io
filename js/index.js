@@ -98,15 +98,9 @@ $(document).ready(function() {
         $(this).parent().find(".choice-box").css({"background-color" : "#BCABE2", "color": "#111"});
         $(this).css({"background-color" : "#F2B4B5", "color": "#111"});
         var choiceValue = $(this).attr("value");
-        var valueTotal = $(this).parents(".class-name").find(".map-choice").attr("value");
-        var valueTotalNum = add(valueTotal); 
-        $(this).parents(".class-name").attr("value", valueTotalNum);
-        $(this).parent().parent().parent().attr("value", choiceValue);
+        $(this).parents(".map-choice").attr("value", choiceValue);
+        var totalRookieNum = $(this).parents(".result-val")
 
-        if ($(this).parents(".class-0")) {
-            $(this).parents(".class-0").attr("value", choiceValue)
-
-        }
         var resultVal = Number(value1) + Number(value2) + Number(value3) + Number(value4);
         
         var resultComp = resultVal / choiceMapL0;
@@ -140,7 +134,7 @@ $(document).ready(function() {
         }
     })
     $(".next").on("click", function() {
-        window.scrollTo(0,0);
+        $("body").scrollTop(0, 0);
         var classValue1 = $(this).parent().attr("value");
         var classValue2 = $(this).parent().attr("value");
         var classValue3 = $(this).parent().attr("value");
